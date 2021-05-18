@@ -61,6 +61,14 @@ class SLL {
         }
         return count;
     }
+
+    display(){
+        var runner = this.head;
+        while (runner != null){
+            console.log(runner.val);
+            runner = runner.next;
+        }
+    }
 }
 
 
