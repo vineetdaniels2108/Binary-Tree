@@ -21,11 +21,11 @@ class SLL {
     }
     
     addFront(value) {
-        let newNode  = new SLL(value);
+        var newNode  = new Node(value);
         newNode.next = this.head;
         this.head = newNode;
         console.log(this.head)
-        return this
+        return this.head;
     }
 
     removeFront(){
@@ -37,6 +37,29 @@ class SLL {
             return this.head
         }
 
+    }
+
+    contains(value){
+        var runner = this.head;
+        while (runner != null){
+            if (runner.val == value){
+                return true;
+                runner = runner.next;
+            }
+            else{
+                return false
+            }
+        }
+    }
+
+    length(value){
+        var runner = this.head;
+        var count = 0
+        while (runner != null){
+            count++;
+            runner = runner.next;
+        }
+        return count;
     }
 }
 
