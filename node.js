@@ -69,6 +69,43 @@ class SLL {
             runner = runner.next;
         }
     }
+
+    max(){
+        var max = 0;
+        var runner = this.head;
+        while (runner !=null){
+            if (runner.val > max){
+                max = runner.val;
+                runner = runner.next;
+            }
+        }
+        return max;
+    }
+
+    min(){
+        var min = 0;
+        var runner = this.head;
+        while (runner !=null){
+            if (runner.val < min){
+                min = runner.val;
+                runner = runner.next;
+            }
+        }
+        return min;
+    }
+
+    avg(){
+        var sum = 0; 
+        var count = 0; 
+        var runner = this.head;
+        while (runner != null){
+            sum = sum + runner.val;
+            count++;
+            runner = runner.next;
+        }
+        var avg = sum/count
+        return avg;
+    }
 }
 
 
